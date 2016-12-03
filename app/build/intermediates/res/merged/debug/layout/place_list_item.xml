@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="120dp"
+    android:padding="6dip" >
+
+    <ImageView
+        android:id="@+id/poster"
+        android:layout_width="120dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="6dip"
+        android:contentDescription="TODO" />
+
+    <TextView
+        android:id="@+id/coverage"
+        android:layout_width="fill_parent"
+        android:layout_height="36dip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/poster"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="Description"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/coverage"
+        android:layout_alignParentTop="true"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_toRightOf="@id/poster"
+        android:gravity="center_vertical"
+        android:text="Example application"
+        android:textSize="26sp" />
+
+    <ImageView
+        android:id="@+id/delete_btn"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_toRightOf="@+id/name"
+        android:src="@drawable/ic_highlight_off_black_24dp"/>
+
+</RelativeLayout><!-- From: file:/Users/nathanielwendt/Google%20Drive/Texas/Research/Paco/Paco/app/src/main/res/layout/place_list_item.xml -->

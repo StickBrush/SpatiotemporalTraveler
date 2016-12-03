@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:rsb="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        android:id="@+id/mapview"
+        tools:context=".MainActivity"
+        android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+    <!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:id="@+id/top_slider"-->
+        <!--android:layout_below="@id/mapview">-->
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+            <!--&lt;!&ndash;android:text="1:00 am"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/seek_upper_label"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="110dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:textStyle="bold"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:gravity="center_vertical|center_horizontal"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_alignParentLeft="true"/>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<SeekBar android:max="23"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/seek_upper"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_alignParentRight="true"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_toRightOf="@+id/seek_upper_label"/>&ndash;&gt;-->
+    <!--</RelativeLayout>-->
+
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:id="@+id/labels">
+        <TextView
+            android:text="-72hr"
+            android:id="@+id/seek_lower_label"
+            android:textStyle="bold"
+            android:layout_height="match_parent"
+            android:layout_width="50dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_alignParentLeft="true"/>
+        <TextView
+            android:text="now"
+            android:id="@+id/seek_upper_label"
+            android:textStyle="bold"
+            android:layout_height="match_parent"
+            android:layout_width="50dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_alignParentRight="true"
+            />
+        <!--<SeekBar android:max="23"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:id="@+id/seek_lower"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_toRightOf="@+id/seek_lower_label"/>-->
+    </RelativeLayout>
+
+    <org.florescu.android.rangeseekbar.RangeSeekBar
+        android:id="@+id/slider_bars"
+        android:layout_width="match_parent"
+        android:layout_weight="2"
+        android:layout_height="0dp"
+        rsb:absoluteMinValue="-72"
+        rsb:absoluteMaxValue="0"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="25dp"
+        />
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:id="@+id/button_group">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_query"
+            android:id="@+id/query_btn"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_clear"
+            android:id="@+id/clear_btn"
+            android:layout_toRightOf="@+id/query_btn"
+            android:layout_toLeftOf="@+id/pin_btn"
+            android:layout_alignParentBottom="true"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_set_confirm"
+            android:id="@+id/pin_btn"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_weight="2"
+        android:layout_height="0dp"
+        android:layout_below="@id/button_group"
+        android:id="@+id/spacer" />
+</LinearLayout>
+<!-- From: file:/Users/nathanielwendt/Google%20Drive/Texas/Research/Paco/Paco/app/src/main/res/layout/fragment_map.xml -->

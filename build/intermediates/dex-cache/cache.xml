@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/nathanielwendt/Google Drive/Texas/Research/Paco/Paco/app/build/intermediates/exploded-aar/org.florescu.android.rangeseekbar/rangeseekbar-library/0.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="b8f19036e690aaf0676a0926db48e3ebaeb12fe4">
+        <dex dex="/Users/nathanielwendt/Google Drive/Texas/Research/Paco/Paco/app/build/intermediates/pre-dexed/debug/classes-52f06ce5f09ba1e688191ac96dfd66a75aff89f1.jar" />
+    </item>
+
+</items>
