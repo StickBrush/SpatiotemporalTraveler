@@ -38,8 +38,8 @@ public class MainActivity extends AppCompatActivity implements PlacesFragment.On
     private Toolbar toolbar;
     private FragmentHelper fHelper;
 
-    private String TOOLBAR_TRACKING = "PACO (Tracking)";
-    private String TOOLBAR_PLAIN = "PACO";
+    private String TOOLBAR_TRACKING;
+    private String TOOLBAR_PLAIN ;
     private boolean tracking = false;
 
     private LSTFilter filter;
@@ -54,6 +54,9 @@ public class MainActivity extends AppCompatActivity implements PlacesFragment.On
         setContentView(R.layout.activity_main);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        TOOLBAR_PLAIN = getResources().getString(R.string.app_name);
+        TOOLBAR_TRACKING = TOOLBAR_PLAIN + " (Tracking)";
 
 //        SharedPreferences sharedpreferences = getSharedPreferences("Places", Context.MODE_PRIVATE);
 //        sharedpreferences.edit().clear().commit();
