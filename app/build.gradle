@@ -27,11 +27,12 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar', '*.so'])
     implementation 'junit:junit:4.12'
     implementation project(':sqlite3-rtree')
-    implementation 'com.android.support:appcompat-v7:23.4.0'
-    implementation 'com.android.support:design:23.4.0'
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.sqlite:sqlite:2.0.1'
+    implementation 'com.google.android.material:material:1.0.0'
     implementation 'com.google.android.gms:play-services:12.0.1'
     implementation 'com.karumi:dexter:2.3.1'
     implementation 'org.florescu.android.rangeseekbar:rangeseekbar-library:0.3.0'

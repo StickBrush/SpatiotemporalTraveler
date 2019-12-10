@@ -181,13 +181,14 @@ public class LocationService extends Service implements
     public void onConnected(Bundle connectionHint) {
         mLastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
 
-        Intent intent = new Intent();
-        intent.setAction(ACTION_LOC);
-        double[] latlong = new double[]{mLastLocation.getLatitude(), mLastLocation.getLongitude()};
-        intent.putExtra(LAT_LONG_DATA, latlong);
-        sendBroadcast(intent);
-
-        if (mLastLocation == null)
+        if(mLastLocation != null) {
+            Intent intent = new Intent();
+            intent.setAction(ACTION_LOC);
+            double[] latlong = new double[]{mLastLocation.getLatitude(), mLastLocation.getLongitude()};
+            intent.putExtra(LAT_LONG_DATA, latlong);
+            sendBroadcast(intent);
+        }
+        else
             Toast.makeText(this, "No location detected. Make sure location is enabled on the device.", Toast.LENGTH_LONG).show();
         startLocationUpdates();
     }

@@ -22,10 +22,6 @@ import static nathanielwendt.mpc.ut.edu.paco.utils.DBConstants.DATABASE_VERSION;
 
 public class SQLiteRTree extends SQLiteOpenHelper implements STStorage {
 
-    static {
-        System.loadLibrary("sqliteX");
-    }
-
     private Context myContext;
     private String table_identifier;
 
