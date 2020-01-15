@@ -15,6 +15,7 @@ import org.sqlite.database.sqlite.SQLiteOpenHelper;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import static nathanielwendt.mpc.ut.edu.paco.utils.DBConstants.DATABASE_NAME;
 import static nathanielwendt.mpc.ut.edu.paco.utils.DBConstants.DATABASE_VERSION;
@@ -105,20 +106,20 @@ public class SQLiteRTree extends SQLiteOpenHelper implements STStorage {
 
 
         if(mins.hasX() && maxs.hasX()){
-            query += prefix + " minX >= " + String.format("%f", mins.getX()) +
-                    " AND maxX <= " + String.format("%f", maxs.getX());
+            query += prefix + " minX >= " + String.format(Locale.ENGLISH,"%f", mins.getX()) +
+                    " AND maxX <= " + String.format(Locale.ENGLISH, "%f", maxs.getX());
             prefix = " AND ";
         }
 
         if(mins.hasY() && maxs.hasY()){
-            query += prefix + " minY >= " + String.format("%f", mins.getY()) +
-                    " AND maxY <= " + String.format("%f", maxs.getY());
+            query += prefix + " minY >= " + String.format(Locale.ENGLISH, "%f", mins.getY()) +
+                    " AND maxY <= " + String.format(Locale.ENGLISH, "%f", maxs.getY());
             prefix = " AND ";
         }
 
         if(mins.hasT() && maxs.hasT()){
-            query += prefix + " minT >= " + String.format("%f", mins.getT()) +
-                    " AND maxT <= " + String.format("%f", maxs.getT());
+            query += prefix + " minT >= " + String.format(Locale.ENGLISH, "%f", mins.getT()) +
+                    " AND maxT <= " + String.format(Locale.ENGLISH, "%f", maxs.getT());
             prefix = " AND ";
         }
 
